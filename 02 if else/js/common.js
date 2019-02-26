@@ -29,14 +29,46 @@ else{
     console.log(" k = n = m");
 }*/
 
+/*var a = 5;
+var b = "5";
+
+console.log(a, typeof (a));
+console.log(b, typeof (b));
+
+if (a === b){
+    console.log("True");
+}
+else{
+    console.log("False");
+}*/
+
 //================================
 
 function GetData() {
-    let usrname = document.querySelector(".username").value;
-    let password = document.querySelector(".password").value;
+    var usrname = document.querySelector(".username").value;
+    var password = document.querySelector(".password").value;
+    var password2 = document.querySelector(".repassword").value
+    
+    var currentUser = "admin";
 
+    if (currentUser === usrname){
+        console.log("User exist!");
+    }
+    else if (password.length <=4 || password2.length <=4){
+        console.log("Less then 4");
+    }
+    else if (password.length >=16 || password2.length >=16){
+        console.log("More then 16");
+    }
+    else if (password === password2){
+        console.log("Wlcome!");
+    }
+    else{
+        console.log('Diffrent passwords');
+    }
 
-    console.log(usrname);
-    console.log(password);
+    /*console.log(usrname);
+    console.log("Password1 ", password.length);
+    console.log("Password1 ", password2.length);*/
 
 }
