@@ -72,3 +72,19 @@ function GetData() {
     console.log("Password1 ", password2.length);*/
 
 }
+
+function GetMonth(){
+    var month = document.querySelector(".month").value;
+    //console.log("GetMonth = ", month);
+
+    if (month == 1 || month == 2 || month == 12){
+        console.log("Winter!");
+    }
+    else if(month == 3 || month == 4 || month == 5){
+        console.log("Spring!");
+    }
+    else{
+        console.log("Invalid input");
+    }
+
+}
