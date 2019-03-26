@@ -20,7 +20,7 @@ console.log(func);*/
 
 //==============
 
-var ClientDB = ["ClientInfo"];
+var ClientDB = [];
 
 function GetData() {
   var name = document.querySelector(".name").value;
@@ -56,20 +56,20 @@ function Validate() {
     // }
     else {
       console.log("Success!");
-      SaveData(name, surname, amount, period);
+      var newClinet = new SaveData(name, surname, amount, period, rate);
+      ClientDB.push(newClinet);
     }
   };
  
 }
 
 
-function SaveData(name, surname, amount, period) {
-  ClientDB.push(name);
-  ClientDB.push(surname);
-  ClientDB.push(amount);
-  ClientDB.push(period);
-  ClientDB.push("|");
-  //ShowPersonInfo();
+function SaveData(name, surname, amount, period, rate) {
+  this.name = name;
+  this.surname = surname;
+  this.amount = amount;
+  this.period = period;
+  this.rate = rate;
 }
 
 
