@@ -51,3 +51,9 @@ div3.addEventListener(
   },
   false
 );
+
+
+var input = document.querySelector(".input");
+input.addEventListener('keypress', function(){
+    console.log(event.keyCode);
+});
