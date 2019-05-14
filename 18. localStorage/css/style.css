@@ -27,4 +27,7 @@
     background: yellow;
     cursor: pointer;
 }
+.error{
+    color: red;
+}
 
